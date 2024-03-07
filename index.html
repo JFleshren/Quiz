@@ -5,29 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    link
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 </head>
 
 <body>
-    <div class="container mt-4">;
-        <h1 class="mb-4">Javascript Quiz</h1>;
-        <form id="quizForm">;
-            <div class="mb-2">;
-                <h2>Question 1:</h2>;
-                <p>//QUESTION GOES HERE</p>;
- // CHOICES GO HERE
+    <div class="container mt-4">
+        <header>
+            <h1 class="mb-4">JavaScript Quiz</h1>
+        </header>
+        <form id="quizForm">
+            <section class="question">
+                <h2>Question 1:</h2>
+                <p>Where is the correct place to insert JavaScript?</p>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="question1" id="q1" value="//ANSWER GOES HERE">
-                    <label class="form-check-label" for="q1">
-                        //ANSWER GOES HERE
+                    <input class="form-check-input" type="radio" name="question1" id="q1a" value="head">
+                    <label class="form-check-label" for="q1a">
+                        The &lt;head&gt; section
                     </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question1" id="q1b" value="body">
+                    <label class="form-check-label" for="q1b">
+                        The &lt;body&gt; section
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question1" id="q1c" value="both">
+                    <label class="form-check-label" for="q1c">
+                        Both of the above
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question1" id="q1d" value="none">
+                    <label class="form-check-label" for="q1d">
+                        None of the above
+                    </label>
+                </div>
+            </section>
+            
+            <section class="question">
+                <h2>Question 2:</h2>
+                <p>What is the correct syntax for referring to an external script called "xxx.js"?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question2" id="q2a" value="script-src">
+                    <label class="form-check-label" for="q2a">
+                        &lt;script src="xxx.js"&gt;
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question2" id="q2b" value="script-href">
+                    <label class="form-check-label" for="q2b">
+                        &lt;script href="xxx.js"&gt;
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question2" id="q2c" value="script-name">
+                    <label class="form-check-label" for="q2c">
+                        &lt;script name="xxx.js"&gt;
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question2" id="q2d" value="none">
+                    <label class="form-check-label" for="q2d">
+                        None of the above
+                    </label>
+                </div>
+            </section>
+            
+            <section class="question">
+                <h2>Question 3:</h2>
+                <p>The external JavaScript file must contain the &lt;script&gt; tag.</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question3" id="q3a" value="true">
+                    <label class="form-check-label" for="q3a">
+                        True
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question3" id="q3b" value="false">
+                    <label class="form-check-label" for="q3b">
+                        False
+                    </label>
+                </div>
+            </section>
+            
+            <section class="question">
+                <h2>Question 4:</h2>
+                <p>How do you create a function in JavaScript?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question4" id="q4a" value="function-myFunction">
+                    <label class="form-check-label" for="q4a">
+                        function myFunction()
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question4" id="q4b" value="function-equals-myFunction">
+                    <label class="form-check-label" for="q4b">
+                        function= myFunction()
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question4" id="q4c" value="function-colon-myFunction">
+                    <label class="form-check-label" for="q4c">
+                        function: myFunction()
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question4" id="q4d" value="none">
+                    <label class="form-check-label" for="q4d">
+                        None of the above
+                    </label>
+                </div>
+            </section>
+            
+            <section class="question">
+                <h2>Question 5:</h2>
+                <p>How do you write an IF statement in JavaScript?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question5" id="q5a" value="if-3-equals">
+                    <label class="form-check-label" for="q5a">
+                        if (i===3)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question5" id="q5b" value="if-assignment">
+                    <label class="form-check-label" for="q5b">
+                        if i=3 then
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question5" id="q5c" value="if-double-equals">
+                    <label class="form-check-label" for="q5c">
+                        if i==3 then
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question5" id="q5d" value="if-assignment-single-equals">
+                    <label class="form-check-label" for="q5d">
+                        if i=3
+                    </label>
+                </div>
+            </section>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 
     <script src="./assets/js/script.js"></script>
 </body>
