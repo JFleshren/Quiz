@@ -1,36 +1,46 @@
-document.getElementById('quizForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    let timeLeft = 60;
+    const timerDisplay = document.getElementById('time');
 
-    var answers = {
-        question1: getSelectedValue('question1'),
-        question2: getSelectedValue('question2'),
-        question3: getSelectedValue('question3'),
-        question4: getSelectedValue('question4'),
-        question5: getSelectedValue('question5')
-    };
+    // Define currentQuestionIndex here
+    let currentQuestionIndex = 0;
 
-    function getSelectedValue(name) {
-        var element = document.querySelector('input[name="' + name + '"]:checked');
-        return element ? element.value : null;
+    // Function to start timer
+    function startTimer() {
     }
 
-    var score = 0;
-    if (answers.question1 === 'both') {
-        score++;
-    }
-    if (answers.question2 === 'script-src') {
-        score++;
-    }
-    if (answers.question3 === 'false') {
-        score++;
-    }
-    if (answers.question4 === 'function-myFunction') {
-        score++;
-    }
-    if (answers.question5 === 'if-three-equals') {
-        score++;
+    // Event listener for start button
+    document.getElementById('startButton').addEventListener('click', () => {
+        // Hide start screen
+        document.getElementById('startScreen').style.display = 'none';
+        // Show the timer
+        document.getElementById('timer').style.display = 'block';
+        // Show first Q
+        showQuestion(currentQuestionIndex);
+        startTimer();
+    });
+
+    // js show one question at a time
+    const questions = document.querySelectorAll('.question');
+
+    // Function to show current question
+    function showQuestion(index) {
+        questions.forEach((question, idx) => {
+            if (idx === index) {
+                question.classList.add('active');
+            } else {
+                question.classList.remove('active');
+            }
+        });
     }
 
-    // score
-    alert('Your score is: ' + score);
+    // Event listener for "Next" button
+    document.querySelector('.next-question').addEventListener('click', () => {
+        currentQuestionIndex++;
+        if (currentQuestionIndex >= questions.length) {
+            currentQuestionIndex = questions.length - 1;
+        }
+        showQuestion(currentQuestionIndex);
+    });
 });
+
