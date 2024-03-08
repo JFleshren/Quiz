@@ -44,29 +44,29 @@
         <div id="timer" style="display: none;">Time: <span id="time">60</span> seconds</div>
 
         <form id="quizForm" style="display: none;">
-            <section class="question active">
+            <section class="question active" data-correct="both">
                 <h2>Question 1:</h2>
                 <p>Where is the correct place to insert JavaScript?</p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question1" id="q1a" value="head">
+                    <input class="form-check-input" type="radio" name="question1" id="q1a" value="wrong">
                     <label class="form-check-label" for="q1a">
                         The &lt;head&gt; section
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question1" id="q1b" value="body">
+                    <input class="form-check-input" type="radio" name="question1" id="q1b" value="wrong">
                     <label class="form-check-label" for="q1b">
                         The &lt;body&gt; section
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question1" id="q1c" value="both">
+                    <input class="form-check-input" type="radio" name="question1" id="q1c" value="correct">
                     <label class="form-check-label" for="q1c">
                         Both of the above
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question1" id="q1d" value="none">
+                    <input class="form-check-input" type="radio" name="question1" id="q1d" value="wrong">
                     <label class="form-check-label" for="q1d">
                         None of the above
                     </label>
@@ -77,25 +77,25 @@
                 <h2>Question 2:</h2>
                 <p>What is the correct syntax for referring to an external script called "xxx.js"?</p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question2" id="q2a" value="&lt;script src=&quot;xxx.js&quot;&gt;">
+                    <input class="form-check-input" type="radio" name="question2" id="q2a" value="correct">
                     <label class="form-check-label" for="q2a">
                         &lt;script src=&quot;xxx.js&quot;&gt;
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question2" id="q2b" value="&lt;script href=&quot;xxx.js&quot;&gt;">
+                    <input class="form-check-input" type="radio" name="question2" id="q2b" value="wrong">
                     <label class="form-check-label" for="q2b">
                         &lt;script href=&quot;xxx.js&quot;&gt;
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question2" id="q2c" value="&lt;script name=&quot;xxx.js&quot;&gt;">
+                    <input class="form-check-input" type="radio" name="question2" id="q2c" value="wrong">
                     <label class="form-check-label" for="q2c">
                         &lt;script name=&quot;xxx.js&quot;&gt;
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question2" id="q2d" value="None of the above">
+                    <input class="form-check-input" type="radio" name="question2" id="q2d" value="wrong">
                     <label class="form-check-label" for="q2d">
                         None of the above
                     </label>
@@ -106,13 +106,13 @@
                 <h2>Question 3:</h2>
                 <p>The external JavaScript file must contain the &lt;script&gt; tag.</p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question3" id="q3a" value="true">
+                    <input class="form-check-input" type="radio" name="question3" id="q3a" value="wrong">
                     <label class="form-check-label" for="q3a">
                         True
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question3" id="q3b" value="false">
+                    <input class="form-check-input" type="radio" name="question3" id="q3b" value="correct">
                     <label class="form-check-label" for="q3b">
                         False
                     </label>
@@ -123,25 +123,25 @@
                 <h2>Question 4:</h2>
                 <p>How do you create a function in JavaScript?</p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question4" id="q4a" value="function-myFunction()">
+                    <input class="form-check-input" type="radio" name="question4" id="q4a" value="correct">
                     <label class="form-check-label" for="q4a">
                         function myFunction()
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question4" id="q4b" value="function-equals-myFunction()">
+                    <input class="form-check-input" type="radio" name="question4" id="q4b" value="wrong">
                     <label class="form-check-label" for="q4b">
                         function= myFunction()
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question4" id="q4c" value="function-colon-myFunction()">
+                    <input class="form-check-input" type="radio" name="question4" id="q4c" value="wrong">
                     <label class="form-check-label" for="q4c">
                         function: myFunction()
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question4" id="q4d" value="none">
+                    <input class="form-check-input" type="radio" name="question4" id="q4d" value="wrong">
                     <label class="form-check-label" for="q4d">
                         None of the above
                     </label>
@@ -152,25 +152,25 @@
                 <h2>Question 5:</h2>
                 <p>How do you write an IF statement in JavaScript?</p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question5" id="q5a" value="if (i===3)">
+                    <input class="form-check-input" type="radio" name="question5" id="q5a" value="correct">
                     <label class="form-check-label" for="q5a">
                         if (i===3)
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question5" id="q5b" value="if i=3 then">
+                    <input class="form-check-input" type="radio" name="question5" id="q5b" value="wrong">
                     <label class="form-check-label" for="q5b">
                         if i=3 then
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question5" id="q5c" value="if i==3 then">
+                    <input class="form-check-input" type="radio" name="question5" id="q5c" value="wrong">
                     <label class="form-check-label" for="q5c">
                         if i==3 then
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question5" id="q5d" value="if i=3">
+                    <input class="form-check-input" type="radio" name="question5" id="q5d" value="wrong">
                     <label class="form-check-label" for="q5d">
                         if i=3
                     </label>
@@ -182,7 +182,8 @@
                 <button type="button" class="btn btn-primary next-question">Next</button>
             </div>
             
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button id="submitQuizButton" type="button" class="btn btn-primary">Submit</button>
+
         </form>
     </div>
 
@@ -194,21 +195,17 @@
             let timeLeft = 60;
             const timerDisplay = document.getElementById('time');
 
-            // Function to start timer - Start of change
+            // Function to start timer
             function startTimer() {
-                const timerInterval = setInterval(() => {
                     timeLeft--;
                     timerDisplay.textContent = timeLeft;
 
                     if (timeLeft <= 0) {
                         clearInterval(timerInterval);
-                       
                         alert("Time's up!");
                         document.getElementById('quizForm').submit();
                     }
-                }, 1000); // Update timer
             }
-            // Function to start the timer - End of change
 
             // start button
             document.getElementById('startButton').addEventListener('click', () => {
@@ -216,6 +213,8 @@
                 document.getElementById('startScreen').style.display = 'none';
                 // Show timer
                 document.getElementById('timer').style.display = 'block';
+                // Show quiz form
+                document.getElementById('quizForm').style.display = 'block';
                 // Show first question
                 showQuestion(currentQuestionIndex);
                 // Start the timer
@@ -236,12 +235,15 @@
                 });
             }
 
-            document.querySelector('.next-question').addEventListener('click', () => {
-                currentQuestionIndex++;
-                if (currentQuestionIndex >= questions.length) {
-                    currentQuestionIndex = questions.length - 1;
-                }
-                showQuestion(currentQuestionIndex);
+            // Event listener for "Next" buttons
+            document.querySelectorAll('.next-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    currentQuestionIndex++;
+                    if (currentQuestionIndex >= questions.length) {
+                        currentQuestionIndex = questions.length - 1;
+                    }
+                    showQuestion(currentQuestionIndex);
+                });
             });
         });
     </script>

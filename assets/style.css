@@ -1,19 +1,25 @@
+/* Reset default browser styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #000; /* Dark background */
 }
 
+/* Container styles */
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(34, 16, 114);
 }
+
 
 h1 {
     text-align: center;
@@ -21,10 +27,11 @@ h1 {
 }
 
 form {
-    background-color: #ffffff;
+    background-color: #222; /* Dark theme for form */
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #007bff; /* Light blue text */
 }
 
 .question {
@@ -33,14 +40,17 @@ form {
 
 .question h2 {
     margin-bottom: 10px;
+    color: #007bff; /* Light blue text */
 }
 
 .question p {
     margin-bottom: 10px;
+    color: #007bff; /* Light blue text */
 }
 
 .form-check {
     margin-bottom: 10px;
+    color: #007bff; /* Light blue text */
 }
 
 button {
@@ -57,4 +67,8 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+#time {
+    color: red; /* Red timer text */
 }
